@@ -214,7 +214,7 @@ html{
 @media (min-width:200px) and (max-width: 569px){
     .box input,select {width: 150px;}.box{ max-height: 414px;margin-left: auto;
         margin-right: auto;}.title{font-size: 1.5rem;}#demo{display: none;}#container{max-width: 560px}
-}*/.modal {
+}*/.modal,#pritableContent{
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 9999; /* Sit on top */
@@ -231,7 +231,7 @@ html{
 }
 
 /* Modal Content */
-#content {
+#content{
     position: fixed;
   background-color: #fefefe;
   top: 44%;

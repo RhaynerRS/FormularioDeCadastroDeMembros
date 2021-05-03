@@ -107,7 +107,7 @@ const modalButton=()=>{
             return function() {
                 modal.style.display="block"
                 let lista = document.querySelector("#content")
-                conteudo=`<div id="delModal"><i onclick="fecharModal() "class="fas fa-times-circle"></i></div><div style="color:black;"onclick="modalButton()"><h1>${people[j].nome}</h1><h3>${people[j].sub}</h3><hr><div class="subContent"><p>Cargo: ${people[j].job}</p><p>Aniversario: ${people[j].birth}</p><p>Tel: ${people[j].phone}</p><p>Bairro: ${people[j].bairro}</p><p>Rua: ${people[j].endereco}</p><p>№: ${people[j].num}</p></div><div id="id"></div></div>`
+                conteudo=`<div id="delModal"><i onclick="fecharModal() "class="fas fa-times-circle"></i><i onclick="printDiv('content')"class="fas fa-times-circle"></i></div><div style="color:black;"onclick="modalButton()"><h1>${people[j].nome}</h1><h3>${people[j].sub}</h3><hr><div class="subContent"><p>Cargo: ${people[j].job}</p><p>Aniversario: ${people[j].birth}</p><p>Tel: ${people[j].phone}</p><p>Bairro: ${people[j].bairro}</p><p>Rua: ${people[j].endereco}</p><p>№: ${people[j].num}</p></div><div id="id"></div></div>`
                 lista.innerHTML=conteudo
             }
         })(i)
@@ -128,10 +128,18 @@ window.onclick=function(event){
     }
 }
 function fecharModal(){
-    
     modal.style.display="none"
-
 }
+function printDiv(div){
+    var printContent=document.getElementById(div)
+    printContent=printContent.innerHTML
+    console.log(printContent)
+    var originalContents=document.body.innerHTML;
+    document.body.innerHTML=printContent
+    window.print()
+    document.body.innerHTML=originalContents
+}
+//<i onclick="fecharModal() "class="fas fa-times-circle"></i>
 /*function index(g=document.getElementById("#item")){
     for (var i = 0, len = g.children.length; i < len; i++)
     {
