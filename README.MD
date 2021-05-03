@@ -1,4 +1,3 @@
-Meu Primeiro Repositório 
+Sistema de Cadastros de membros para igrejas
 ======================== 
-
-O Git/GitHub são legais!
+feito com HTML/CSS/Javascript com a ajuda do electron
